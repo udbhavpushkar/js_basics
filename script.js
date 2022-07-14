@@ -420,25 +420,25 @@
 
 // console.log(cubeOutput)
 
-let nums = [2, 5, 3, 9, 7]
+// let nums = [2, 5, 3, 9, 7]
 
 // function square(a) {
 //   return a * a
 // }
 
-const square = (a) => a * a
+// const square = (a) => a * a
 
 // function cube(a) {
 //   return a * a * a
 // }
 
-const cube = (a) => a * a * a
+// const cube = (a) => a * a * a
 
 // function isOdd(a) {
 //   return a % 2 !== 0
 // }
 
-const isOdd = (a) => a % 2 !== 0
+// const isOdd = (a) => a % 2 !== 0
 
 // function calculate(arr, logic) {
 //   let result = [] // initialize empty array
@@ -448,13 +448,13 @@ const isOdd = (a) => a % 2 !== 0
 //   return result
 // }
 
-const calculate = (arr, logic) => {
-  let result = [] // initialize empty array
-  for (let i = 0; i < arr.length; i++) {
-    result[i] = logic(arr[i]) //applying logic function
-  }
-  return result
-}
+// const calculate = (arr, logic) => {
+//   let result = [] // initialize empty array
+//   for (let i = 0; i < arr.length; i++) {
+//     result[i] = logic(arr[i]) //applying logic function
+//   }
+//   return result
+// }
 
 // let outputSquare = calculate(nums, square)
 
@@ -466,7 +466,7 @@ const calculate = (arr, logic) => {
 // let OddOutput = calculate(nums, isOdd)
 // console.log(OddOutput)
 
-let arr = [2, 6, 8, 4, 88, 90, 21]
+// let arr = [2, 6, 8, 4, 88, 90, 21]
 
 // Inplace methods of array => it will change the original array
 
@@ -485,3 +485,70 @@ let arr = [2, 6, 8, 4, 88, 90, 21]
 // let y = arr.slice(2, 5) // returns array from index 2 - 5 (5 not included)
 
 // console.log(y)
+
+// let arr = ["Udbhav", "Rohit", "Champalal", "Akriti", "Rizwan"]
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log("Hello " + arr[i])
+// }
+
+//forEach => iterate through each of the element in an array
+// arr.forEach((ele) => {
+//   console.log("Hello from foreach " + ele)
+// })
+
+// let nums = [3, 4, 5, 8, 6, 9, 76]
+
+// nums.forEach((ele) => {
+//   console.log("This is crrent number : " + ele)
+// })
+
+// map => it will return the transformed array
+
+// let outputDouble = nums.map((ele) => 2 * ele)
+
+// console.log(outputDouble)
+
+// filter => it will filter the array according to the given condition and return the new array
+
+// let filterOutput = nums.filter((ele) => ele > 5)
+
+// console.log(filterOutput)
+
+let products = [
+  { name: "Macbook", price: 150000 },
+  { name: "Ipad", price: 60000 },
+  { name: "Iphone mini", price: 50000 },
+  { name: "Iphone XR", price: 90000 },
+  { name: "Apple Pencil", price: 6000 },
+  { name: "Apple Mag", price: null },
+]
+
+// let filterProducts = products.filter((element) => element.price > 50000 && element.price < 100000)
+// console.log(filterProducts)
+
+let nums = [3, 4, 5, 8, 6, 9, 74]
+
+// let sum = 0
+// for (let i = 0; i < nums.length; i++) {
+//   sum = sum + nums[i]
+// }
+
+// console.log(sum)
+// Reduce => it will operate on all elements of array and then return one value
+
+// let sumOutput = nums.reduce((prev, ele) => {
+//   return prev + ele
+// }, 0)
+
+// console.log(sumOutput)
+
+// Primitives => Anything that is not an object eg number, string, null, undefined, true, false
+
+// ternary operator =>  <condition> ? if true run this : else run this
+
+// let isLogin = true
+
+// let a = isLogin ? 1000 : 0
+
+// console.log(a)
