@@ -8,7 +8,7 @@
 
 //when function ends or return, its execution context gets destroyed
 
-// lexical env => local env + lexical env of parent
+// lexical env => local env + lexical env of parent ---
 
 // == : check for value, === : check for value and data type (no implicit coercion happens)
 
@@ -515,19 +515,19 @@
 
 // console.log(filterOutput)
 
-let products = [
-  { name: "Macbook", price: 150000 },
-  { name: "Ipad", price: 60000 },
-  { name: "Iphone mini", price: 50000 },
-  { name: "Iphone XR", price: 90000 },
-  { name: "Apple Pencil", price: 6000 },
-  { name: "Apple Mag", price: null },
-]
+// let products = [
+//   { name: "Macbook", price: 150000 },
+//   { name: "Ipad", price: 60000 },
+//   { name: "Iphone mini", price: 50000 },
+//   { name: "Iphone XR", price: 90000 },
+//   { name: "Apple Pencil", price: 6000 },
+//   { name: "Apple Mag", price: null },
+// ]
 
 // let filterProducts = products.filter((element) => element.price > 50000 && element.price < 100000)
 // console.log(filterProducts)
 
-let nums = [3, 4, 5, 8, 6, 9, 74]
+// let nums = [3, 4, 5, 8, 6, 9, 74]
 
 // let sum = 0
 // for (let i = 0; i < nums.length; i++) {
@@ -552,3 +552,69 @@ let nums = [3, 4, 5, 8, 6, 9, 74]
 // let a = isLogin ? 1000 : 0
 
 // console.log(a)
+
+let user = {
+  name: "Udbhav",
+  age: 24,
+  address: {
+    pincode: "224123",
+    city: "Ayodhya",
+  },
+  greet: () => {
+    console.log("Hi everyone from " + this.name)
+  },
+  walking: () => {
+    console.log(this.name + " is Walking")
+  },
+}
+
+let user2 = {
+  name: "Saquibul",
+  age: 22,
+  address: {
+    pincode: "224123",
+    city: "Ayodhya",
+  },
+  greet: function () {
+    console.log("Hi everyone from " + this.name)
+  },
+  walking: function () {
+    console.log(this.name + " is Walking")
+  },
+}
+
+// user.greet()
+// user.walking()
+
+// user2.greet()
+// user2.walking()
+
+// this => points to the object from which it is called
+
+// Arrow functions does not attach itself to this keyword
+
+// Prototype : Every object in JS has in-build object called prototype. This prototype is itself an object.
+
+// Prototype Chain : The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain.
+//  The chain ends when we reach a prototype that has null for its own prototype.
+
+let nums = [3, 4, 5, 8, 6, 9, 74]
+
+// nums.push = function () {
+//   console.log("Ha ha... I dont do anything..")
+// }
+
+// let object = nums
+// while (object) {
+//   console.log(object)
+//   object = object.__proto__
+// }
+
+// Class = > Template for creating objects
+// Object =>  Instance / implementation of class
+// Inheritance => Accessing the properties of parent class
+//
+
+let currentDate = new Date(880914600000)
+// let newDate = Date.parse(new Date(currentDate))
+// 1 January, 1970 =>
