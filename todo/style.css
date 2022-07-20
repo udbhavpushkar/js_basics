@@ -1,0 +1,27 @@
+.wrapper{
+  width: 70%;
+  margin: 100px auto;
+}
+
+.input{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.input input{
+  margin-right: 20px;
+}
+
+#list{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.red{
+  color: red;
+}
+
+#list :last-child{
+  color: red;
+}
