@@ -553,35 +553,35 @@
 
 // console.log(a)
 
-let user = {
-  name: "Udbhav",
-  age: 24,
-  address: {
-    pincode: "224123",
-    city: "Ayodhya",
-  },
-  greet: () => {
-    console.log("Hi everyone from " + this.name)
-  },
-  walking: () => {
-    console.log(this.name + " is Walking")
-  },
-}
+// let user = {
+//   name: "Udbhav",
+//   age: 24,
+//   address: {
+//     pincode: "224123",
+//     city: "Ayodhya",
+//   },
+//   greet: () => {
+//     console.log("Hi everyone from " + this.name)
+//   },
+//   walking: () => {
+//     console.log(this.name + " is Walking")
+//   },
+// }
 
-let user2 = {
-  name: "Saquibul",
-  age: 22,
-  address: {
-    pincode: "224123",
-    city: "Ayodhya",
-  },
-  greet: function () {
-    console.log("Hi everyone from " + this.name)
-  },
-  walking: function () {
-    console.log(this.name + " is Walking")
-  },
-}
+// let user2 = {
+//   name: "Saquibul",
+//   age: 22,
+//   address: {
+//     pincode: "224123",
+//     city: "Ayodhya",
+//   },
+//   greet: function () {
+//     console.log("Hi everyone from " + this.name)
+//   },
+//   walking: function () {
+//     console.log(this.name + " is Walking")
+//   },
+// }
 
 // user.greet()
 // user.walking()
@@ -615,6 +615,82 @@ let nums = [3, 4, 5, 8, 6, 9, 74]
 // Inheritance => Accessing the properties of parent class
 //
 
-let currentDate = new Date(880914600000)
+// let currentDate = new Date(880914600000)
 // let newDate = Date.parse(new Date(currentDate))
 // 1 January, 1970 =>
+
+// ES6 New features
+
+// Arrow functions
+
+// let and const
+
+// In JS you can write string enclosed in backticks (`)
+// Multi-line string using backticks (`)
+// let str = `Udbhav
+// is
+// my namen`
+
+// let fname = "Ankit"
+
+// console.log("Hello " + fname + " you are welcome")
+
+// Template literals (`)
+// console.log(`Hello ${fname} you are welcome here`)
+
+// Class
+// class Book {}
+
+// Destructuring arrays
+// let students = ["Anurag", "Fahad", "Nitesh", "Siraj", "Bhomesh"]
+// let name1 = students[0]
+// let name2 = students[1]
+
+// let [name1, name2, name3] = students
+
+/* const getData = () => {
+  let d = ["Udbhav", 24]
+  return d
+} */
+
+// let [name, age] = getData()
+
+// Destructuring Objects
+/* let info = {
+  name: "Pala",
+  age: 22,
+  originalName: "Mishal",
+  batch: "Siri",
+} */
+
+// let originalName = info.originalName
+// let batch = info.batch
+
+// let { originalName, batch } = info
+
+// console.log(originalName)
+
+// const getInfo = (name, age, oname, batch) => {
+//   /* let d = {
+//     name: name,
+//     age: age,
+//     originalName: oname,
+//     batch: batch,
+//   } */
+//   let d = {
+//     name,
+//     age,
+//     originalName: oname,
+//     batch,
+//   }
+//   return d
+// }
+
+// let { originalName } = getInfo("Adarsh", 21, "Adarash again", "Siri")
+
+// if (parseInt("Vinod")) {
+//   console.log("Hey there")
+// }
+
+// truthy => https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+// falsy values =>  https://developer.mozilla.org/en-US/docs/Glossary/Falsy

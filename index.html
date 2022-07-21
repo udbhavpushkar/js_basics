@@ -9,17 +9,20 @@
 </head>
 <body>  
 
-  <h1 id="title">Udbhav</h1>
-
   <div>
-    <form>
-      <input type="number" id="second" placeholder="Type time in second">
-      <button id="start">Start Timer</button>
-    </form>
+    <button id="up">Up</button>
+    <button id="down">Down</button>
+    <button id="left">Left</button>
+    <button id="right">Right</button>
   </div>
-  
-  <div style="margin-top: 20px; font-size: 20px;" id="timer">00</div>
+
+  <div style="margin: 20px auto; width: 70%; height: 600px; border: 2px solid grey; position: relative;">
+    <div id="box" style="height: 100px; width: 100px; border: 3px solid red; position: absolute; left: 0px; top: 0px;">
+    </div>
+  </div>
+
 
   <script src="./script.js"></script>
+  <script src="./box.js"></script>
 </body>
 </html>
