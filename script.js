@@ -694,3 +694,57 @@ let nums = [3, 4, 5, 8, 6, 9, 74]
 
 // truthy => https://developer.mozilla.org/en-US/docs/Glossary/Truthy
 // falsy values =>  https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+
+// Event bubbling => Propogation of event from child element to parent till global object is called event bubbling.
+/* document.getElementById("parent").addEventListener("click", (e) => {
+  console.log("Hey click from parent")
+})
+
+document.getElementById("child").addEventListener("click", (e) => {
+  console.log("Hey click from child...")
+})
+
+document.getElementById("grandchild").addEventListener("click", (e) => {
+  // e.stopPropagation()
+  console.log("Hey click from grandchild...")
+}) */
+
+// Event Capturing => Opposite of event bubbling . Propogation of event from top parent element to current element.
+
+/* document.getElementById("parent").addEventListener(
+  "click",
+  (e) => {
+    console.log("Hey click from parent")
+  },
+  true
+)
+
+document.getElementById("child").addEventListener(
+  "click",
+  (e) => {
+    console.log("Hey click from child...")
+  },
+  true
+)
+
+document.getElementById("grandchild").addEventListener(
+  "click",
+  (e) => {
+    // e.stopPropagation()
+    console.log("Hey click from grandchild...")
+  },
+  true
+) */
+
+// Storage of Browser => LocalStorage, Cookie, SessionStorage
+// localStorage => Stores information permanently, secure same origin access
+// sessionStorage => Stores information until the browser is closed. secure same origin access
+// cookie => stores information in string format, also have expiry date
+
+// Origin => http://google.com, protocol+domain+host
+
+localStorage.setItem("name", "Udbhav")
+localStorage.setItem("email", "udbhav@gmail.com")
+
+console.log(localStorage.getItem("age"))
+// localStorage.removeItem("name")
