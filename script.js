@@ -737,14 +737,105 @@ document.getElementById("grandchild").addEventListener(
 ) */
 
 // Storage of Browser => LocalStorage, Cookie, SessionStorage
-// localStorage => Stores information permanently, secure same origin access
-// sessionStorage => Stores information until the browser is closed. secure same origin access
-// cookie => stores information in string format, also have expiry date
+// localStorage => Stores information permanently, secure same origin access, stores in key : value pair
+// sessionStorage => Stores information until the browser is closed. secure same origin access, stores in key : value pair
+// cookie => stores information in string format, also have expiry date, stores data in string
 
 // Origin => http://google.com, protocol+domain+host
 
-localStorage.setItem("name", "Udbhav")
-localStorage.setItem("email", "udbhav@gmail.com")
+// Local Storage
+// localStorage.setItem("name", "Udbhav")
+// localStorage.setItem("email", "udbhav@gmail.com")
 
-console.log(localStorage.getItem("age"))
+// console.log(localStorage.getItem("age"))
 // localStorage.removeItem("name")
+// localStorage.clear() , // delete all local storage data
+
+// Session Storage
+// sessionStorage.setItem("firstName", "Champa")
+// sessionStorage.setItem("lastName", "Lal")
+// sessionStorage.clear() , // delete all session storage data
+
+// Cookie
+// document.cookie = "name=udbhav; expiresIn=Mon Jul 26 2022 21:33:20 GMT+0530 (India Standard Time)"
+// document.cookie = "name=udbhav; lastname=dbhjsgd;  expiresIn=Mon Jul 26 2022 21:33:20 GMT+0530 (India Standard Time)"
+// delete cookie =>  set expriesIn to previous date
+
+// let a = 8
+
+// console.log(b / a)
+
+// console.log("Udbhav")
+
+// Exception handling => Handles the unexpected error
+
+// try {
+//   let a = 8
+//   console.log(b / a)
+// } catch (error) {
+//   console.log(error.message)
+// }
+
+// console.log("Udbhav")
+
+// synchronous => Execture line by line. Will wait for above code to finish before exectuing next line code.
+
+// console.log("Anurag")
+//below line will take time to get execute
+// let x = 0
+// while (x <= 999999999) {
+//   x++
+// }
+
+// setTimeout(() => {
+//   console.log("Middle wala")
+// }, 3000)
+// console.log("Soni")
+
+// Click on My Orders
+// i promise i ll fetch data my orders from database
+// success => show my orders
+// error => show the error
+// chatting with feedback bot
+
+//i open laptop
+// start coding
+// order food (bcz i am hungry) => app promises me to deliver food
+// i sleep
+// listen to songs
+
+// let p = new Promise((resolve, reject) => {
+//   let x = 90
+//   if (x > 20) {
+//     resolve("Yes promise is resolved")
+//   } else {
+//     reject("No this is rejected.")
+//   }
+// })
+
+// p.then((res) => {
+//   console.log(res)
+// }).catch((error) => {
+//   console.log(error)
+// })
+
+let getWeather = new Promise((resolve, reject) => {
+  let x = 0
+  while (x <= 999999999) {
+    x++
+  }
+  let fetched = false
+  if (fetched) {
+    resolve("Weather is cool")
+  } else {
+    reject("Cannot fetch weather detail")
+  }
+})
+
+getWeather
+  .then((res) => {
+    console.log(res)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
