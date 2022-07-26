@@ -778,7 +778,9 @@ document.getElementById("grandchild").addEventListener(
 
 // console.log("Udbhav")
 
-// synchronous => Execture line by line. Will wait for above code to finish before exectuing next line code.
+// synchronous => Execture line by line. Will wait for above code to finish before exectuing next line code. Block the next line execution
+
+// Asynchronous => Non blocking.
 
 // console.log("Anurag")
 //below line will take time to get execute
@@ -819,23 +821,37 @@ document.getElementById("grandchild").addEventListener(
 //   console.log(error)
 // })
 
-let getWeather = new Promise((resolve, reject) => {
-  let x = 0
-  while (x <= 999999999) {
-    x++
-  }
-  let fetched = false
-  if (fetched) {
-    resolve("Weather is cool")
-  } else {
-    reject("Cannot fetch weather detail")
-  }
-})
+// let getWeather = new Promise((resolve, reject) => {
+//   let x = 0
+//   while (x <= 999999999) {
+//     x++
+//   }
+//   let fetched = false
+//   if (fetched) {
+//     resolve("Weather is cool")
+//   } else {
+//     reject("Cannot fetch weather detail")
+//   }
+// })
 
-getWeather
-  .then((res) => {
-    console.log(res)
-  })
-  .catch((error) => {
-    console.log(error)
-  })
+// getWeather
+//   .then((res) => {
+//     console.log(res)
+//   })
+//   .catch((error) => {
+//     console.log(error)
+//   })
+
+// console.log("Page loaded")
+// fetch all friends list // this will run in parallel and it wont block the next line (if it is Asynchronous)
+// console.log("Play some music")
+
+// API => Application Programming Interface, it allows applications to talk to each other
+
+// load page
+// fetch student
+// play music
+// print heyyy
+
+// Promise => It is a placeholder/ container for future value
+// State of promise => Initiate => Pending State => Settled State => (Success or failed)
