@@ -855,3 +855,4 @@ document.getElementById("grandchild").addEventListener(
 
 // Promise => It is a placeholder/ container for future value
 // State of promise => Initiate => Pending State => Settled State => (Success or failed)
+// .then .catch => It is used to consume the promsie

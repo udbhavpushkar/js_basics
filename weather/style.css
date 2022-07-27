@@ -1,0 +1,26 @@
+.wrapper{
+  width: 70%;
+  margin: 100px auto;
+}
+
+.w-100{
+  width: 100%;
+}
+
+#city{
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+#search{
+  background-color: blue;
+  color: aliceblue;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin: 10px auto;
+}
+
+#result{
+  margin: 20px auto;
+}
