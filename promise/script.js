@@ -18,7 +18,7 @@ const list = document.getElementById("list")
 
 // console.log("Lets End")
 
-async function fetchUserData() {
+/* async function fetchUserData() {
   try {
     let data = await fetch("https://fakestoreapi.com/users")
     let result = await data.json()
@@ -33,4 +33,21 @@ async function fetchUserData() {
 }
 console.log("Hey at first")
 fetchUserData()
-console.log("Heyy at last")
+console.log("Heyy at last") */
+
+const myPromise = new Promise((resolve, reject) => {
+  let a = 6
+  if (a > 5) {
+    resolve({ name: "Udbhav", age: 25 })
+  } else {
+    reject("Hey I am sorry")
+  }
+})
+
+myPromise
+  .then((res) => {
+    console.log(res)
+  })
+  .catch((error) => {
+    console.log(error)
+  })

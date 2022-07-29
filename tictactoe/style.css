@@ -1,0 +1,14 @@
+#parent{
+  width: fit-content;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.box{
+  height: 100px;
+  width: 100px;
+  border: 1px solid grey;
+  font-size: 26px;
+  cursor: pointer;
+}
