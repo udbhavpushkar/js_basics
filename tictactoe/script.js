@@ -1,15 +1,7 @@
 const parent = document.getElementById("parent")
+const message = document.getElementById("message")
 
 let gameState = ["", "", "", "", "", "", "", "", ""]
-
-// create 9 box
-for (let i = 0; i < 9; i++) {
-  // gameState.push("")
-  const box = document.createElement("div") // create div
-  box.classList.add("box") // add box class
-  box.setAttribute("id", i) // give id
-  parent.appendChild(box) // put the box div inside parent
-}
 
 let gameActive = true
 
@@ -26,8 +18,19 @@ const winningCondition = [
   [2, 4, 6],
 ]
 
+message.innerHTML = `Current Player : ${currentPlayer}`
+
+// create 9 box
+for (let i = 0; i < 9; i++) {
+  const box = document.createElement("div") // create div
+  box.classList.add("box") // add box class
+  box.setAttribute("id", i) // give id
+  parent.appendChild(box) // put the box div inside parent
+}
+
 // Check is game won or not
 const isWon = () => {
+  let result = false
   for (let i = 0; i < winningCondition.length; i++) {
     let condition = winningCondition[i]
     let a = gameState[condition[0]]
@@ -40,20 +43,26 @@ const isWon = () => {
 
     if (a == b && b == c) {
       gameActive = false
-      alert(currentPlayer + " won the game")
+      result = true
     }
   }
+  return result
 }
 
 // handling action on click of box
 const handleClickEvent = (e) => {
-  if (!e.target.innerText) {
+  if (!e.target.innerText && gameActive) {
+    // checking inner text is empty
     e.target.innerText = currentPlayer
-    e.target.style.color = currentPlayer === "X" ? "red" : "green"
+    e.target.style.color = currentPlayer === "X" ? "red" : "green" // ignore , figure out yourself
 
     gameState[e.target.id] = currentPlayer // update gameState
-    isWon()
-    currentPlayer = currentPlayer === "X" ? "O" : "X" // toggle / change current player
+    if (isWon()) {
+      message.innerHTML = `Player ${currentPlayer} won`
+    } else {
+      currentPlayer = currentPlayer === "X" ? "O" : "X" // toggle / change current player
+      message.innerHTML = `Current Player : ${currentPlayer}`
+    }
   }
 }
 
