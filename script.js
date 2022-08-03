@@ -856,3 +856,68 @@ document.getElementById("grandchild").addEventListener(
 // Promise => It is a placeholder/ container for future value
 // State of promise => Initiate => Pending State => Settled State => (Success or failed)
 // .then .catch => It is used to consume the promsie
+
+// get => facebook.com/user
+// post => facebook.com/post (payload )
+// put
+// delete
+// patch
+
+// arrowFn()
+// normalFunction()
+
+// const arrowFn = () => {
+//   console.log("hey I am arrow function")
+// }
+
+// function normalFunction() {
+//   console.log("hey I am normal function")
+// }
+
+// Event Loop => Its check wheather call stack is empty, if yes then take function from
+// callback queue and put it inside cal, stack
+
+// console.log("hey")
+// document.querySelector("body").addEventListener("click", () => {
+//   console.log("Hey this is clicked")
+// })
+
+// console.log("bye")
+
+// let user1 = {
+//   name: "Udbhav",
+//   age: 24,
+//   tellAge: function () {
+//     console.log("User age is : " + this.age)
+//   },
+// }
+
+// let user2 = {
+//   name: "Ankit",
+//   age: 20,
+//   tellAge: () => {
+//     console.log("User age is : " + this.age)
+//   },
+// }
+
+// let userData = {}
+// fetch("https://randomuser.me/api/")
+//   .then((res) => res.json())
+//   .then((response) => {
+//     console.log(response)
+//     userData = response.results[0]
+//     document.getElementById("full-name").innerHTML = userData.name.first + " " + userData.name.last
+//     document.getElementById("img").setAttribute("src", userData.picture.large)
+//   })
+//   .catch((error) => {
+//     console.log("error")
+//   })
+
+let x = 0
+let interval = null
+document.getElementById("btn-test").addEventListener("click", (e) => {
+  clearInterval(interval)
+  interval = setInterval(() => {
+    console.log(x++)
+  }, 500)
+})
