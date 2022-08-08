@@ -913,11 +913,63 @@ document.getElementById("grandchild").addEventListener(
 //     console.log("error")
 //   })
 
-let x = 0
-let interval = null
-document.getElementById("btn-test").addEventListener("click", (e) => {
-  clearInterval(interval)
-  interval = setInterval(() => {
-    console.log(x++)
-  }, 500)
-})
+// let x = 0
+// let interval = null
+// document.getElementById("btn-test").addEventListener("click", (e) => {
+//   clearInterval(interval)
+//   interval = setInterval(() => {
+//     console.log(x++)
+//   }, 500)
+// })
+
+function whichDay(date) {
+  // write code here
+  // return the output , do not use console.log here
+
+  let week = ["last", "first", "second", "third", "fourth", "fifth", "sixth"]
+
+  return `It is the ${week[date.getDay()]} day of the week`
+}
+
+let myDate = new Date("2022", "7", "15")
+
+let myDate2 = new Date("2022", "7", "20")
+
+let diff = myDate2 - myDate
+
+console.log(diff / (1000 * 60 * 60 * 24))
+
+console.log(whichDay())
+
+// function test() {
+//   let y = 35
+
+//   function print() {
+//     console.log(y)
+//   }
+//   return print
+// }
+
+// let a = test()
+
+// console.log("hey")
+// console.log("hey...")
+// console.log("hey !!!")
+// console.log("hey !!!djshd")
+
+// a()
+
+// BOM => Browser object Model => It allows js to talk to browser
+
+// let a = window.location.href
+// let a = window.location.protocol
+
+// console.log(a)
+
+// document.getElementById("close").addEventListener("click", () => {
+//   window.close() // close current tab
+// })
+
+// document.getElementById("print").addEventListener("click", () => {
+//   window.print() // print current tab
+// })

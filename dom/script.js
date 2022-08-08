@@ -5,9 +5,9 @@
 // let element5 = document.querySelectorAll("div") // // Html Collection / Array of elements
 // console.log(element5)
 
-let title = document.getElementById("title") // Select html element to manipulate
-let title2 = document.getElementById("title2")
-let counter = document.getElementById("counter")
+// let title = document.getElementById("title") // Select html element to manipulate
+// let title2 = document.getElementById("title2")
+// let counter = document.getElementById("counter")
 // setTimeout(function () {
 //   title.style.color = "red"
 //   title.innerText = "Anurag"
@@ -41,11 +41,66 @@ let counter = document.getElementById("counter")
 //   console.log("Load more content")
 // })
 
-document.getElementById("testing").addEventListener("submit", (e) => {
-  e.preventDefault()
+// document.getElementById("testing").addEventListener("submit", (e) => {
+//   e.preventDefault()
 
-  let username = document.getElementById("name").value
+//   let username = document.getElementById("name").value
 
-  title.innerText = "Welcome here, " + username
-  title.classList.add("big")
+//   title.innerText = "Welcome here, " + username
+//   title.classList.add("big")
+// })
+
+// Get Name and Img element
+let fullName = document.getElementById("full-name")
+let img = document.getElementById("img")
+
+// Get All Button elements
+let ageBtn = document.getElementById("age-btn")
+let emailBtn = document.getElementById("email-btn")
+let phoneBtn = document.getElementById("phone-btn")
+let newUserBtn = document.getElementById("getUser")
+
+let userData = [{}]
+
+fetchRandomUserData()
+
+function fetchRandomUserData() {
+  fetch("https://randomuser.me/api/")
+    .then((res) => res.json())
+
+    .then((response) => {
+      console.log(response)
+      userData = response.results[0]
+
+      // get full name
+      document.getElementById("full-name").innerHTML = userData.name.first + " " + userData.name.last
+
+      // get image
+      document.getElementById("img").setAttribute("src", userData.picture.large)
+
+      // add event to age button
+      ageBtn.addEventListener("click", () => {
+        let age = document.getElementById("age")
+        age.innerText = "age : " + userData.dob.age
+      })
+
+      // add event to email button
+      emailBtn.addEventListener("click", () => {
+        let email = document.getElementById("email")
+        email.innerText = "Email : " + userData.email
+      })
+
+      // add event to phone button
+      phoneBtn.addEventListener("click", () => {
+        let phone = document.getElementById("phone")
+        phone.innerText = "Phone : " + userData.phone
+      })
+    })
+    .catch((error) => {
+      console.log("error")
+    })
+}
+
+document.getElementById("getUser").addEventListener("click", () => {
+  fetchRandomUserData()
 })
